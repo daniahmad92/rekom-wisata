@@ -167,7 +167,27 @@ Dengan langkah-langkah di atas, rekomendasi tempat wisata yang serupa dapat dibe
 
 ### Model Development dengan Collaborative Filtering
 
+Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan collaborative filtering meliputi data preparation, pembagian data menjadi data latih dan data validasi, serta pembangunan model dan pengujian sistem rekomendasi. Berikut adalah rincian dari setiap tahap yang telah dijelaskan:
+   
+##### Data Preparation:
 
+- Pada tahap data preparation, dilakukan proses encoding fitur User_Id pada dataset ratings dan fitur Place_Id pada dataset ratings menjadi sebuah array.
+- Hasil encoding tersebut kemudian dipetakan (mapped) ke dalam dataset ratings untuk menghubungkan data pengguna dengan data tempat wisata.
+- Dalam tahap ini, juga diperoleh informasi tentang jumlah pengguna (user) yang teridentifikasi, yaitu sebanyak 300 pengguna, dan jumlah tempat wisata (place) yang terdaftar, yaitu sebanyak 437 tempat wisata.
+- Rentang nilai rating yang digunakan dalam dataset adalah dari 1 hingga 5.
+
+
+##### Pembagian Data Latih dan Data Validasi:
+
+- Untuk mempersiapkan proses pengujian, data ratings diacak sebelum dilakukan pembagian menjadi data latih (train data) dan data validasi (validation data).
+- Pembagian data dilakukan dengan rasio 80:20, di mana 80% data digunakan sebagai data latih dan 20% data digunakan sebagai data validasi.
+
+##### Pengembangan Model dan Pengujian
+
+- Dalam tahap pengembangan model, model machine learning dibangun menggunakan kelas MyRecommendationModel yang merupakan model rekomendasi kustom dengan pendekatan collaborative filtering.
+- Model ini menggunakan layer embedding untuk merepresentasikan pengguna (users) dan tempat wisata (places) dalam ruang berdimensi rendah.
+- Proses pelatihan model menggunakan optimizer Adam dan binary crossentropy loss function untuk menghitung loss dan meminimalkan kesalahan prediksi.
+- Evaluasi kinerja sistem rekomendasi dilakukan dengan menggunakan metrik RMSE (Root Mean Squared Error) berdasarkan data validasi.
 
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
