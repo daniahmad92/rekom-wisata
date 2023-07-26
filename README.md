@@ -4,7 +4,7 @@
 
   Pariwisata merupakan salah satu sektor ekonomi yang memiliki peran penting dalam pertumbuhan dan pembangunan suatu negara. Di Indonesia, sektor pariwisata telah menjadi salah satu kontributor utama bagi perekonomian negara.Menurut laporan Badan Pusat Statistik (BPS), kunjungan wisman pada periode Januari hingga April 2023 meningkat sebesar 393,83 persen dibandingkan dengan periode yang sama pada tahun sebelumnya, yaitu tahun 2022. Angka pertumbuhan yang sangat signifikan ini mencerminkan pemulihan sektor pariwisata Indonesia setelah menghadapi tantangan besar akibat pandemi COVID-19 yang melanda dunia sejak tahun 2020 [[1]](https://www.bps.go.id/pressrelease/2023/06/05/1978/peningkatan-kunjungan-wisatawan-mancanegara-pada-april-2023-yang-tumbuh-276-31-persen-dibandingkan-april-2023-dan-jumlah-penumpang-angkutan-laut-dalam-negeri-pada-april-2023-naik-24-75-persen.html).
 
-  Pertumbuhan kunjungan wisman yang signifikan pada Januari hingga April 2023, seperti yang diungkapkan oleh Badan Pusat Statistik (BPS), menunjukkan bahwa ada peluang besar bagi industri pariwisata Indonesia untuk memanfaatkan data wisman yang masuk dan mengoptimalkan pengalaman wisata mereka. Inilah saat yang tepat untuk mengintegrasikan sistem rekomendasi berbasis machine learning dalam industri pariwisata untuk memberikan pengalaman wisata yang lebih personal dan relevan bagi para wisman yang datang ke Indonesia.
+  Pertumbuhan kunjungan wisman yang signifikan pada Januari hingga April 2023, seperti yang diungkapkan oleh Badan Pusat Statistik (BPS), menunjukkan bahwa ada peluang besar bagi industri pariwisata Indonesia untuk memanfaatkan data wisman yang masuk dan mengoptimalkan pengalaman wisata mereka. Inilah saat yang tepat untuk mengintegrasikan sistem rekomendasi berbasis machine learning dalam industri pariwisata untuk memberikan pengalaman wisata yang lebih personal dan relevan bagi para wisman yang datang ke Indonesia.Dengan demikian, Pengalaman wisata yang disesuaikan dengan minat individu ini akan meningkatkan kepuasan wisman dan membantu meningkatkan citra Indonesia sebagai destinasi pariwisata yang menarik dan berkualitas.
 
 ## Business Understanding
 
@@ -12,12 +12,14 @@
 
 ### Problem Statements
 
+Berdasarkan latar belakang yang telah dipaparkan sebelumnya, maka rumusan masalah dalam proyek ini adalah:
 
 Bagaimana mengintegrasikan sistem rekomendasi berbasis machine learning  dalam industri pariwisata untuk memberikan pengalaman wisata yang lebih personal dan relevan bagi para wisman yang datang ke Indonesia?
 
+
 ### Goals
 
-Berdasarkan masalah yang diidentifikasi di atas, maka tujuan dari proyek ini adalah mengintegrasikan sistem rekomendasi berbasis machine learning dalam industri pariwisata Indonesia untuk memberikan pengalaman wisata yang lebih personal dan relevan bagi para wisman yang berkunjung ke Indonesia. 
+ Proyek ini bertujuan untuk mencari solusi dan implementasi terbaik dalam mengintegrasikan sistem rekomendasi berbasis machine learning dalam industri pariwisata Indonesia untuk meningkatkan pengalaman wisatawan dan mendukung perkembangan pariwisata secara berkelanjutan 
 
 ### Solution statements
 
@@ -31,7 +33,6 @@ Content Based Filtering adalah salah satu pendekatan dalam sistem rekomendasi ya
 
 Collaborative Filtering adalah metode yang memanfaatkan pola kesamaan dan kesesuaian minat antara wisatawan lain untuk memberikan rekomendasi. Dengan menggunakan data dari banyak wisatawan, sistem dapat mengidentifikasi tren dan pola minat yang serupa. Jika sejumlah besar wisatawan memiliki minat terhadap destinasi budaya, sistem dapat merekomendasikan tempat wisata budaya yang populer kepada wisatawan lain dengan minat serupa.
 
-Pengalaman wisata yang disesuaikan dengan minat individu ini akan meningkatkan kepuasan wisman dan membantu meningkatkan citra Indonesia sebagai destinasi pariwisata yang menarik dan berkualitas.
 
 
 ## Data Understanding
