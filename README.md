@@ -82,42 +82,63 @@ Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses tr
 
    Proses pengecekan data yang hilang atau _missing value_ dilakukan pada masing-masing dataset tourism_with_id dan tourism_rating. Berdasarkan hasil pengecekan, ternyata tidak ada data yang hilang dari kedua dataset tersebut.
 
+
+
 ## Modeling
 
 
-Dalam sistem rekomendasi wisata menggunakan Content-based Filtering, model akan merekomendasikan destinasi wisata berdasarkan kesamaan konten atau fitur antara destinasi wisata yang telah dikunjungi atau disukai oleh pengguna sebelumnya. Sedangkan dalam Collaborative Filtering, model akan merekomendasikan destinasi wisata berdasarkan pola preferensi dari pengguna yang memiliki kesamaan dengan pengguna lain.
-
 ### Model Development dengan Content Based Filtering
 
-##### TF-IDF Vectorizer
+Pada tahap ini, akan dikembangkan model untuk rekomendasi tempat wisata dengan memanfaatkan metode TF-IDF (Term Frequency-Inverse Document Frequency) dan Cosine Similarity. Pendekatan Content-Based Filtering ini akan berfokus pada karakteristik atau konten dari item yang direkomendasikan, dalam hal ini, teks deskripsi kategori wisata
 
-1. Inisialisasi TfidfVectorizer
-2. Melakukan perhitungan idf pada data kategori wisata
-3. Mengambil daftar nama fitur (kata-kata unik) dari kategori wisata dengan menggunakan metode get_feature_names_out()
-4. Melakukan fit lalu ditransformasikan ke bentuk matrix untuk mengubah teks kategori wisata menjadi matriks TF-IDF
-5. Mengubah vektor TF-IDF dalam bentuk matriks dengan fungsi todense()
-6. Membuat dataframe untuk melihat TF-IDF matrix. Kolom diisi dengan "Kategori wisata" dan baris diisi dengan naama tempat wisata tersebut
+TF-IDF akan digunakan untuk mengubah teks deskripsi kategori wisata menjadi representasi vektor numerik yang mencerminkan pentingnya setiap kata dalam teks tersebut. Sedangkan Cosine Similarity akan mengukur kesamaan antara vektor representasi TF-IDF dari teks kategori wisata. Dengan demikian, pendekatan Content-Based Filtering dengan TF-IDF dan Cosine Similarity memungkinkan kita untuk merekomendasikan tempat wisata yang serupa berdasarkan kemiripan konten atau karakteristik teks kategorinya.
 
-Output yang dihasilkan pada tahap ini yaitu berupa dataframe yang menunjukkan korelasi antara nama tempat wisata dengan kategori wisata tersebut
+Adapun tahap dalam pembuatan rekomendasi ini , diantaranya:
 
-##### Cosine Similarity
+***Langkah 1:*** Menghitung TF-IDF
 
-1. Menghitung cosine similarity pada matrix tf-idf
-2. Membuat dataframe dari variabel cosine_similarity dengan baris dan kolom berupa nama tempat wisatg
+- Inisialisasi TfidfVectorizer untuk mengubah teks kategori wisata menjadi matriks TF-IDF.
+- Lakukan fit pada TfidfVectorizer untuk menghitung TF-IDF dari data kategori wisata.
+- Dapatkan matriks TF-IDF dan daftar nama fitur (kata-kata unik) dari kategori wisata.
 
-ouput yang dihasilkan pada tahap ini yaitu berupa dataframe yang berisi data similarity (kesamaan) antar kategori wisata
 
-##### Membuat fungsi Rekomendasi
+***Langkah 2 :*** Menghitung Cosine Similarity
 
-Fungsi ini untuk merekomendasikan tempat wisata yang serupa berdasarkan nama tempat wisatanya
+- Gunakan matriks TF-IDF yang telah dihitung sebelumnya.
+- Hitung cosine similarity antara setiap pasang teks kategori wisata.
+- Hasilnya akan berupa sebuah dataframe yang berisi nilai cosine similarity antara setiap pasang teks kategori wisata.
 
-Pada tahap ini,peneliti membuat fungsi rekomendasi_destinasi_wisata dengan beberapa parameter sebagai berikut:
-- input_tempat_wisata :  Nama tempat wisata
-- similarity_data     :  Dataframe mengenai similarity yang didefinisikan sebelumnya
-- Items  : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah 'Place_Name' dan 'Category'
-- k : Banyak rekomendasi yang ingin diberikan
 
-Adapun output pada fungsi ini yaitu dihasilkan 5 rekomendasi tempat wiasata
+***Langkah 3 :*** Membuat Fungsi Rekomendasi
+
+- Buat sebuah fungsi yang disebut rekomendasi_destinasi_wisata.
+- Fungsi ini akan digunakan untuk merekomendasikan tempat wisata yang serupa berdasarkan nama tempat wisata yang diinputkan.
+- Fungsi akan menerima beberapa parameter, yaitu:
+  - input_tempat_wisata: Nama tempat wisata yang ingin direkomendasikan.
+  - similarity_data: Dataframe yang berisi nilai cosine similarity dari langkah sebelumnya.
+  - Items: Nama dan fitur yang digunakan untuk mendefinisikan kemiripan (misalnya 'Place_Name' dan 'Category').
+  - k: Banyak rekomendasi yang ingin diberikan.
+
+- Dalam fungsi, ambil baris dari dataframe similarity_data yang sesuai dengan input_tempat_wisata.
+- Urutkan baris tersebut berdasarkan nilai similarity secara menurun.
+- Hapus nilai similarity pada tempat wisata input agar tempat wisata itu sendiri tidak menjadi rekomendasi.
+- Ambil k rekomendasi teratas berdasarkan urutan similarity yang sudah diurutkan.
+- Hasil rekomendasi berupa daftar nama tempat wisata yang serupa.
+
+
+***Langkah 4:*** Penggunaan Fungsi Rekomendasi
+
+- Gunakan fungsi rekomendasi_destinasi_wisata untuk mendapatkan rekomendasi tempat wisata berdasarkan nama tempat wisata yang diinputkan.
+- Masukkan nama tempat wisata yang ingin direkomendasikan ke parameter input_tempat_wisata.
+- Tentukan jumlah rekomendasi yang ingin ditampilkan dengan mengisi nilai k.
+
+
+***Langkah 5:*** Output
+
+- Hasil dari fungsi rekomendasi akan berupa daftar nama tempat wisata yang direkomendasikan berdasarkan similarity dengan tempat wisata input.
+
+Dengan langkah-langkah di atas, rekomendasi tempat wisata yang serupa dapat diberikan berdasarkan nama tempat wisata yang diinputkan, menggunakan pendekatan TF-IDF dan Cosine Similarity.
+
 
 ##### Hasil _Top-N Recommendation_
 
