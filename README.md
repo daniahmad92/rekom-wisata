@@ -182,7 +182,7 @@ Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan co
 - Untuk mempersiapkan proses pengujian, data ratings diacak sebelum dilakukan pembagian menjadi data latih (train data) dan data validasi (validation data).
 - Pembagian data dilakukan dengan rasio 80:20, di mana 80% data digunakan sebagai data latih dan 20% data digunakan sebagai data validasi.
 
-##### Pembuatan Model
+##### Pembuatan Model dan pelatihan
 
 Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filtering,dapat dijelaskan sebagai berikut:
 
@@ -205,6 +205,13 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
    - Metrik evaluasi RMSE digunakan untuk mengukur sejauh mana perbedaan antara rating prediksi dan rating sebenarnya pada data validasi.
    - Early Stopping digunakan untuk menghentikan pelatihan jika tidak ada peningkatan yang signifikan dalam RMSE dalam jumlah epoch tertentu, menghindari overfitting dan menghemat waktu pelatihan.
    - Proses pelatihan dilakukan dengan data pelatihan dan validasi menggunakan batch size 8 dan jumlah epoch 100.
+
+##### Hasil Rekomendasi:
+
+- Hasil rekomendasi berisi 10 tempat wisata teratas yang direkomendasikan oleh model untuk pengguna acak.
+- Selain itu, output dari rekomendasi ini juga menampilkan 5 tempat wisata dengan peringkat tertinggi dari pengguna acak berdasarkan data rating yang sudah diberikan sebagai perbandingan.
+
+
 
 
 ## Evaluation
