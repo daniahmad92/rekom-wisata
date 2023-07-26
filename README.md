@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning:Sistem Rekomendasi Destinasi Wisata Indonesia- Dadan AHmad Dani
+# Laporan Proyek Machine Learning:Sistem Rekomendasi Destinasi Wisata Indonesia- Dadan Ahmad Dani
 
 ## Project Overview
 
@@ -186,19 +186,19 @@ Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan co
 
 Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filtering,dapat dijelaskan sebagai berikut:
 
-1. **Inisialisasi Model:**
+1. Inisialisasi Model:
    - Membuat kelas `MyRecommendationModel` yang akan digunakan sebagai model rekomendasi kustom dengan pendekatan collaborative filtering.
    - Kelas ini memiliki atribut untuk menyimpan jumlah pengguna, jumlah tempat wisata, dan ukuran embedding yang akan digunakan dalam model.
    - Empat layer embedding dibuat untuk merepresentasikan pengguna, bias pengguna, tempat wisata, dan bias tempat.
 
-2. **Metode `call`:**
+2. Metode `call`:
    - Metode `call` digunakan saat model dipanggil dengan input data.
    - Di dalam metode ini, embedding vektor untuk pengguna dan tempat wisata diambil berdasarkan ID yang diberikan sebagai input.
    - Vektor bias untuk pengguna dan tempat wisata juga diambil dari layer embedding yang telah diinisialisasi sebelumnya.
    - Perhitungan hasil perkalian dot (dot product) antara embedding vektor pengguna dan tempat wisata dilakukan untuk setiap pasangan pengguna dan tempat dalam batch input.
    - Hasil perkalian dot tersebut dijumlahkan dengan vektor bias pengguna dan bias tempat wisata untuk menghasilkan nilai probabilitas rekomendasi melalui fungsi aktivasi sigmoid.
 
-3. **Pengembangan Model dan Proses Pelatihan:**
+3. Pengembangan Model dan Proses Pelatihan:
    - Model rekomendasi dikembangkan dengan ukuran embedding 50.
    - Model dikompilasi dengan konfigurasi loss menggunakan binary crossentropy, yang cocok untuk tugas klasifikasi biner seperti rekomendasi.
    - Sebagai optimizer, digunakan Adam dengan learning rate 0.0001 untuk mempercepat proses pembelajaran model.
