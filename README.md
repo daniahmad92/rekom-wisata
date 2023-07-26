@@ -182,12 +182,30 @@ Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan co
 - Untuk mempersiapkan proses pengujian, data ratings diacak sebelum dilakukan pembagian menjadi data latih (train data) dan data validasi (validation data).
 - Pembagian data dilakukan dengan rasio 80:20, di mana 80% data digunakan sebagai data latih dan 20% data digunakan sebagai data validasi.
 
-##### Pengembangan Model dan Pengujian
+##### Pembuatan Model
 
-- Dalam tahap pengembangan model, model machine learning dibangun menggunakan kelas MyRecommendationModel yang merupakan model rekomendasi kustom dengan pendekatan collaborative filtering.
-- Model ini menggunakan layer embedding untuk merepresentasikan pengguna (users) dan tempat wisata (places) dalam ruang berdimensi rendah.
-- Proses pelatihan model menggunakan optimizer Adam dan binary crossentropy loss function untuk menghitung loss dan meminimalkan kesalahan prediksi.
-- Evaluasi kinerja sistem rekomendasi dilakukan dengan menggunakan metrik RMSE (Root Mean Squared Error) berdasarkan data validasi.
+Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filtering,dapat dijelaskan sebagai berikut:
+
+1. **Inisialisasi Model:**
+   - Membuat kelas `MyRecommendationModel` yang akan digunakan sebagai model rekomendasi kustom dengan pendekatan collaborative filtering.
+   - Kelas ini memiliki atribut untuk menyimpan jumlah pengguna, jumlah tempat wisata, dan ukuran embedding yang akan digunakan dalam model.
+   - Empat layer embedding dibuat untuk merepresentasikan pengguna, bias pengguna, tempat wisata, dan bias tempat.
+
+2. **Metode `call`:**
+   - Metode `call` digunakan saat model dipanggil dengan input data.
+   - Di dalam metode ini, embedding vektor untuk pengguna dan tempat wisata diambil berdasarkan ID yang diberikan sebagai input.
+   - Vektor bias untuk pengguna dan tempat wisata juga diambil dari layer embedding yang telah diinisialisasi sebelumnya.
+   - Perhitungan hasil perkalian dot (dot product) antara embedding vektor pengguna dan tempat wisata dilakukan untuk setiap pasangan pengguna dan tempat dalam batch input.
+   - Hasil perkalian dot tersebut dijumlahkan dengan vektor bias pengguna dan bias tempat wisata untuk menghasilkan nilai probabilitas rekomendasi melalui fungsi aktivasi sigmoid.
+
+3. **Pengembangan Model dan Proses Pelatihan:**
+   - Model rekomendasi dikembangkan dengan ukuran embedding 50.
+   - Model dikompilasi dengan konfigurasi loss menggunakan binary crossentropy, yang cocok untuk tugas klasifikasi biner seperti rekomendasi.
+   - Sebagai optimizer, digunakan Adam dengan learning rate 0.0001 untuk mempercepat proses pembelajaran model.
+   - Metrik evaluasi RMSE digunakan untuk mengukur sejauh mana perbedaan antara rating prediksi dan rating sebenarnya pada data validasi.
+   - Early Stopping digunakan untuk menghentikan pelatihan jika tidak ada peningkatan yang signifikan dalam RMSE dalam jumlah epoch tertentu, menghindari overfitting dan menghemat waktu pelatihan.
+   - Proses pelatihan dilakukan dengan data pelatihan dan validasi menggunakan batch size 8 dan jumlah epoch 100.
+
 
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
