@@ -51,6 +51,9 @@ Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
 
+
+Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destination](https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination) yang diambil dari Kaggle dengan `tourism_with_id.csv` dan `tourism_rating.csv` sebagai dataset yang digunakan.
+
   
   **Tabel 2. Variabel Dataset tourism_with_id**
 
@@ -79,18 +82,51 @@ Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
   | 2   | Place_Ratings | Rating yang diberikan oleh wisatawan terhadap tempat wisata tersebut  | int64 |
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+
+Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+
+Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+
+Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
+- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
+- cuisine : merupakan jenis masakan yang disajikan pada restoran.
+- dst
+
+**Rubrik/Kriteria Tambahan (Opsional)**:
+- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+
+
+Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses training model. Di sini dilakukan penghapusan kolom yang tidak diperlukan, pembersihkan data _missing value_, dan melakukan pengecekan dan penghapusan data duplikat.
+
+1. **Penghapusan Kolom yang Tidak Diperlukan**
+
+   Pada dataset tourism_with_id, data yang diperlukan hanya ada pada kolom `Place_Id`, `Place_Name`, dan `Category`, jadi hapus yang lain.
+
+   Pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
+
+2. **Pengecekan Missing Values**
+
+   Proses pengecekan data yang hilang atau _missing value_ dilakukan pada masing-masing dataset tourism_with_id dan tourism_rating. Berdasarkan hasil pengecekan, ternyata tidak ada data yang hilang dari kedua dataset tersebut.
 
 ## Modeling
+
+
 Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
 - Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
+
+Dalam sistem rekomendasi wisata menggunakan Content-based Filtering, model akan merekomendasikan destinasi wisata berdasarkan kesamaan konten atau fitur antara destinasi wisata yang telah dikunjungi atau disukai oleh pengguna sebelumnya. Sedangkan dalam Collaborative Filtering, model akan merekomendasikan destinasi wisata berdasarkan pola preferensi dari pengguna yang memiliki kesamaan dengan pengguna lain.
+
+1. **Content-based Filtering**
+    - TF-IDF Vectorizer
+    - Cosine Similarity
+
+2. **Collaborative Filtering**
+
+
 
 ## Evaluation
 Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
