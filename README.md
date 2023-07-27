@@ -313,3 +313,11 @@ Rekomendasi Destinasi Wisata Untuk User  : 83
    Gambar 3. Kurva RMSE Collaborative Filtering
 
    Nilai RMSE dari sistem rekomendasi dengan pendekatan _collaborative filtering_ adalah 0.3344 pada _Training RMSE_, dan 0.3413 pada _Validation RMSE_.
+
+
+
+## Kesimpulan
+
+Kesimpulan proyek Machine Learning ini menunjukkan bahwa integrasi sistem rekomendasi berbasis machine learning dalam industri pariwisata dapat memberikan pengalaman wisata yang lebih personal dan relevan bagi para wisatawan yang datang ke Indonesia. Dua pendekatan yang digunakan, yaitu Content-Based Filtering dan Collaborative Filtering, memberikan rekomendasi yang sesuai dengan minat dan preferensi pengguna. Pendekatan Content-Based Filtering menggunakan teknik pembobotan TF-IDF dan algoritma cosine similarity untuk merekomendasikan destinasi wisata berdasarkan kesesuaian konten, seperti kategori atau fitur dari tempat-tempat wisata. Sementara itu, Collaborative Filtering memanfaatkan data penilaian atau rating pengguna untuk mencari pola kesamaan minat dan memberikan rekomendasi berdasarkan minat yang serupa. Integrasi kedua pendekatan ini dapat meningkatkan kualitas kunjungan wisatawan dan mendukung pertumbuhan industri pariwisata Indonesia secara berkelanjutan
+
+Model Collaborative Filtering yang dikembangkan dalam proyek ini menunjukkan hasil yang baik dengan nilai RMSE yang rendah pada data pelatihan dan data validasi. Hal ini menandakan bahwa model mampu melakukan prediksi dengan akurat dan dapat memberikan rekomendasi yang relevan berdasarkan data rating dari pengguna. Penggunaan TensorFlow dalam pembuatan model juga membantu dalam mengoptimalkan proses pelatihan dan evaluasi model.
