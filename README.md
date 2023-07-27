@@ -91,6 +91,7 @@ Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses tr
 #### Data Preparation untuk model Content Based Filtering
 
    - Penghapusan Kolom yang Tidak Diperlukan
+   
      Pada dataset tourism_with_id, data yang diperlukan hanya ada pada kolom `Place_Id`, `Place_Name`, dan `Category`, jadi hapus yang lain.Sedangkan pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
 
 #### Data Preparation untuk model Collaborative Filtering
