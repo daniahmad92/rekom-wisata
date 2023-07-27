@@ -230,8 +230,8 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
   Dalam kasus ini, karena semua tempat dalam Tabel 2 memiliki kategori yang sama dengan tempat yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
   
-  TP = jumlah item rekomendasi yang sesuai = 5
-  TN= Jumlah item  rekomendasi yang tidak sesuai=0
+  - TP = jumlah item rekomendasi yang sesuai = 5
+  - TN= Jumlah item  rekomendasi yang tidak sesuai=0
 
   Maka ,Presisinya dapat dihitung sebagai berikut:
 
