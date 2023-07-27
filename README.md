@@ -44,7 +44,7 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
 
 ##### Dataset Lokasi Wisata (tourism_with_id.csv)
   
-  Dataset  `tourism_with_id.csv` , memiliki 11 kolom dan 437 baris.  Dari 11 kolom, terdapat 2 kolom yang memiliki tipe data integer, 4 float dan 5 objek. Adapun Deskripsi dari masing masing variabel dapat dilihat pada Tabel 1 dibawah ini.
+  Dataset  `tourism_with_id.csv` , memiliki 11 kolom dan 437 baris.  Dari 11 kolom, terdapat 2 kolom yang memiliki tipe data integer, 4 float dan 5 object. Adapun Deskripsi dari masing masing variabel dapat dilihat pada Tabel 1 dibawah ini.
 
   Tabel 1. Variabel Dataset tourism_with_id
 
