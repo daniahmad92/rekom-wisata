@@ -209,7 +209,7 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
 Rekomendasi Destinasi Wisata Untuk User  : 83
   
-  **Destinasi Wisata Dengan Rating Tertinggi**
+  Tabel 3. Hasil Rekomendasi Destinasi Wisata Dengan Rating Tertinggi
   
   |                 Place_Name |      Category |
   |---------------------------:|--------------:|
@@ -219,7 +219,8 @@ Rekomendasi Destinasi Wisata Untuk User  : 83
   | Peta Park                  |Taman Hiburan |
   |          Jembatan Pasupati | Taman Hiburan |
   
-  **Top 10 Rekomendasi Destinasi Wisata**
+
+  Tabel 4. Top 10 Rekomendasi Destinasi Wisata
   
   |                          Place_Name |           Category |
   |------------------------------------:|-------------------:|
@@ -253,9 +254,9 @@ Rekomendasi Destinasi Wisata Untuk User  : 83
   - $FP =$ _False Positive_; jumlah item  rekomendasi yang tidak sesuai
 
 
-  Adapun output model Content Based Filtering pada penelitan ini dapat dilihat dari Tabel 1 dan Tabel 1 dibawah ini :
+  Adapun output model Content Based Filtering pada penelitan ini dapat dilihat dari Tabel 5 dan Tabel 6 dibawah ini :
 
-  **Tabel 3. Nama Tempat yang Dipilih Pengguna**
+  **Tabel 5. Nama Tempat yang Dipilih Pengguna**
 
   | Place_Id | Place_Name           | Category  |
   | -------- | -------------------- | ----------- |
@@ -263,7 +264,7 @@ Rekomendasi Destinasi Wisata Untuk User  : 83
 
   Berikut adalah hasil rekomendasi nama tempat berdasarkan kategori yang sama.
 
-  **Tabel 4. Hasil Rekomendasi _Content-based Filtering_**
+  **Tabel 6. Hasil Rekomendasi _Content-based Filtering_**
 
   | Place_Name                          | Category        |
   | ------------------------------------| ----------------|
@@ -274,9 +275,9 @@ Rekomendasi Destinasi Wisata Untuk User  : 83
   | Taman Miniatur Kereta Api           | Taman Hiburan   |
 
 
-  Berdasarkan informasi Tabel 3 dan Tabel 4 diatas , bahwa:
+  Berdasarkan informasi Tabel 5 dan Tabel 6 diatas , bahwa:
 
-  Karena semua item dalam Tabel 4 memiliki kategori yang sama dengan item yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
+  Karena semua item dalam Tabel 6 memiliki kategori yang sama dengan item yang dipilih oleh pengguna (Taman Hiburan), maka semua rekomendasi adalah True Positives.
   
   - TP = jumlah item rekomendasi yang sesuai = 5
   - TN= Jumlah item  rekomendasi yang tidak sesuai= 0
