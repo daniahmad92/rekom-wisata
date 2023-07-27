@@ -190,7 +190,7 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 ## Evaluation
 
 
-#### Evalasi Model Content Based Filtering
+#### Evaluasi Model Content Based Filtering
   
   Adapun matriks evaluasi yang akan digunakan untuk mengevaluasi model content based filtering dapat menggunakan matrik precision.
 
@@ -228,10 +228,10 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
   Berdasarkan informasi diatas , bahwa:
 
-  Dalam kasus ini, karena semua tempat dalam Tabel 2 memiliki kategori yang sama dengan tempat yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
+  Karena semua item dalam Tabel 2 memiliki kategori yang sama dengan item yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
   
   - TP = jumlah item rekomendasi yang sesuai = 5
-  - TN= Jumlah item  rekomendasi yang tidak sesuai=0
+  - TN= Jumlah item  rekomendasi yang tidak sesuai= 0
 
   Maka ,Presisinya dapat dihitung sebagai berikut:
 
@@ -258,3 +258,9 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
 
 
+   Kurva RMSE dapat dilihat pada gambar dibawah ini.
+
+   ![RMSE](https://raw.githubusercontent.com/daniahmad92/rekom-wisata/main/Evaluasi_model_2b.png)
+
+
+   Nilai RMSE dari sistem rekomendasi dengan pendekatan _collaborative filtering_ adalah 0.3344 pada _Training RMSE_, dan 0.3413 pada _Validation RMSE_.Nilai ini relatif kecil menunjukkan bahwa performa model cukup baik
