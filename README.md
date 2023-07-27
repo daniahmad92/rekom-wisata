@@ -79,6 +79,9 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
   
   Proses pengecekan data yang hilang atau Missing Value dilakukan pada semua dataset baik dataset lokasi wisata maupun dataset rating. Setelah dilakukan pengecekan, tidak ada data yang hilang/kosong pada kedua dataset tersbut.
 
+### Pengecekan Data Duplikat
+  
+  Setelah dilakukan pengecekan data duplikat pada kedua dataset menggunakan metode `duplicated()`, ada 79 data duplikat pada dataset rating.Karena jumlah data pada dataset rating ada 10.0000 dan jumlah data duplikatnya relatif sedikit (79 data),maka untuk mengatasinya yaitu dengan cara menghapus data duplikat tersebut.
 
 
 ## Data Preparation
