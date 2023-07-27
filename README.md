@@ -207,6 +207,31 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 - Hasil rekomendasi berisi 10 tempat wisata teratas yang direkomendasikan oleh model untuk pengguna acak.
 - Selain itu, output dari rekomendasi ini juga menampilkan 5 tempat wisata dengan peringkat tertinggi dari pengguna acak berdasarkan data rating yang sudah diberikan sebagai perbandingan.
 
+Rekomendasi Destinasi Wisata Untuk User  : 83
+  
+  **Destinasi Wisata Dengan Rating Tertinggi**
+  
+  |                 Place_Name |      Category |
+  |---------------------------:|--------------:|
+  |        Taman Ismail Marzuki|    Budaya     |
+  | Taman Agrowisata Cilangkap | Taman Hiburan |
+  |            Pantai Nguluran |    Cagar Alam |
+  | Peta Park                  |Taman Hiburan |
+  |          Jembatan Pasupati | Taman Hiburan |
+  
+  **Top 10 Rekomendasi Destinasi Wisata**
+  
+  |                          Place_Name |           Category |
+  |------------------------------------:|-------------------:|
+  |Air Terjun Kedung Pedut              |Cagar Alam          |
+  |Desa Wisata Gamplong                 |Taman Hiburan       |
+  |Dago Dreampark                       |Taman Hiburan       |
+  |Panghegar Waterboom Bandung          |Taman Hiburan       |
+  |Curug Dago                           |Cagar Alam          |
+  |Keraton Surabaya                     |Budaya              |
+  |Monumen Jalesveva Jayamahe           |Budaya              |
+  |Taman Hiburan Rakyat                 |Taman Hiburan       |
+  |Taman Mundu                          |Taman Hiburan       |
 
 
 
@@ -230,28 +255,28 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
   Adapun output model Content Based Filtering pada penelitan ini dapat dilihat dari Tabel 1 dan Tabel 1 dibawah ini :
 
-  **Tabel 5. Nama Tempat yang Dipilih Pengguna**
+  **Tabel 3. Nama Tempat yang Dipilih Pengguna**
 
-  | Place_Id | Place_Name | Category |
-  | -------- | ---------- | ----------- |
-  | 1        | Monumen Nasional | Budaya |
+  | Place_Id | Place_Name           | Category  |
+  | -------- | -------------------- | ----------- |
+  | 1        | Trans Studio Bandung | Taman Hiburan |
 
   Berikut adalah hasil rekomendasi nama tempat berdasarkan kategori yang sama.
 
-  **Tabel 6. Hasil Rekomendasi _Content-based Filtering_**
+  **Tabel 4. Hasil Rekomendasi _Content-based Filtering_**
 
-  | Place_Name                          | Category |
-  | ----------------------------------- | -------- |
-  | Candi Sewu                          | Budaya   |
-  | Museum Benteng Vredeburg Yogyakarta | Budaya   |
-  | Museum Satria Mandala               | Budaya   |
-  | Kyotoku Floating Market             | Budaya   |
-  | Bandros City Tour                   | Budaya   |
+  | Place_Name                          | Category        |
+  | ------------------------------------| ----------------|
+  | Dago Dreampark                      | Taman Hiburan   |
+  | Panghegar Waterboom Bandung         | Taman Hiburan   |
+  | Alive Museum Ancol                  | Taman Hiburan   |
+  | Glamping Lakeside Rancabali         | Taman Hiburan   |
+  | Taman Miniatur Kereta Api           | Taman Hiburan   |
 
 
-  Berdasarkan informasi diatas , bahwa:
+  Berdasarkan informasi Tabel 3 dan Tabel 4 diatas , bahwa:
 
-  Karena semua item dalam Tabel 2 memiliki kategori yang sama dengan item yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
+  Karena semua item dalam Tabel 4 memiliki kategori yang sama dengan item yang dipilih oleh pengguna (Budaya), maka semua rekomendasi adalah True Positives.
   
   - TP = jumlah item rekomendasi yang sesuai = 5
   - TN= Jumlah item  rekomendasi yang tidak sesuai= 0
@@ -261,7 +286,6 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
   Presisi = TP / (TP+TN) = 5 / (5+0) = 1, Artinya, model memberikan rekomendasi yang relevan dengan preferensi pengguna untuk semua tempat yang direkomendasikan.
 
 
-  
 #### Evaluasi Model Collaborative Filtering
 
 
