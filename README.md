@@ -327,7 +327,7 @@ Model Collaborative Filtering yang dikembangkan dalam proyek ini menunjukkan has
 
 - Badan Pusat Statistik (BPS). (2023, 5 Juni). Peningkatan Kunjungan Wisatawan Mancanegara pada April 2023 yang Tumbuh 276,31 Persen Dibandingkan April 2023 dan Jumlah Penumpang Angkutan Laut Dalam Negeri pada April 2023 Naik 24,75 Persen. https://www.bps.go.id/pressrelease/2023/06/05/1978/peningkatan-kunjungan-wisatawan-mancanegara-pada-april-2023-yang-tumbuh-276-31-persen-dibandingkan-april-2023-dan-jumlah-penumpang-angkutan-laut-dalam-negeri-pada-april-2023-naik-24-75-persen.html
 
-- Aprabowo. (2023). Indonesia Tourism Destination Dataset. Kaggle. https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination
+- Aprabowo. (2021). Indonesia Tourism Destination Dataset. Kaggle. https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination
 
 - Scikit-learn. (2023). TfidfVectorizer. Scikit-learn Documentation. https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
 
