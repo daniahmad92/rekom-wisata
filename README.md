@@ -84,6 +84,25 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
   Setelah dilakukan pengecekan data duplikat pada kedua dataset menggunakan metode `duplicated()`, ada 79 data duplikat pada dataset rating.Karena jumlah data pada dataset rating ada 10.0000 dan jumlah data duplikatnya relatif sedikit (79 data),maka untuk mengatasinya yaitu dengan cara menghapus data duplikat tersebut.
 
 
+### Eksploarasi Data
+
+   - *Kategori Wisata*
+
+      ![kategori_wisata](https://raw.githubusercontent.com/daniahmad92/rekom-wisata/main/Grafik_Kategori_wisata.png)
+
+      Gambar 1. Grafik Kategori Wisata
+
+      Informasi yang didapatkan dari Gambar diatas, bahwa kategori wisata yang paling banyak di Indonesia adalah taman hiburan
+
+   - *Harga Tiket Masuk ke Wisata*
+
+      ![harga_tiket](https://raw.githubusercontent.com/daniahmad92/rekom-wisata/main/harga_tiket.png)
+
+      Gambar 2. Grafik Distribusi Harga Tiket Masuk Wisata
+
+      Berdasarkan informasi yang tertera pada Gambar 2, Untuk masuk ke wisata di indonesia kebanyakan gratis. Hal ini terlihat dari grafik yang memiliki frekuensi yang tinggi pada harga 0.  
+
+
 ## Data Preparation
 
 Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses training model. 
@@ -91,7 +110,7 @@ Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses tr
 #### Data Preparation untuk model Content Based Filtering
 
    - Penghapusan Kolom yang Tidak Diperlukan
-   
+
      Pada dataset tourism_with_id, data yang diperlukan hanya ada pada kolom `Place_Id`, `Place_Name`, dan `Category`, jadi hapus yang lain.Sedangkan pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
 
 #### Data Preparation untuk model Collaborative Filtering
@@ -267,4 +286,4 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
    ![RMSE](https://raw.githubusercontent.com/daniahmad92/rekom-wisata/main/Evaluasi_model_2b.png)
 
 
-   Nilai RMSE dari sistem rekomendasi dengan pendekatan _collaborative filtering_ adalah 0.3344 pada _Training RMSE_, dan 0.3413 pada _Validation RMSE_.Nilai ini relatif kecil menunjukkan bahwa performa model cukup baik
+   Nilai RMSE dari sistem rekomendasi dengan pendekatan _collaborative filtering_ adalah 0.3344 pada _Training RMSE_, dan 0.3413 pada _Validation RMSE_.
