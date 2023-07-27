@@ -138,31 +138,6 @@ Adapun tahap dalam pembuatan rekomendasi ini , diantaranya:
 - Hasil dari fungsi rekomendasi akan berupa daftar nama tempat wisata yang direkomendasikan berdasarkan similarity dengan tempat wisata input.
 
 
-##### Hasil _Top-N Recommendation_
-
-  Setelah data tempat wisata dikonversi menjadi matriks dengan menggunakan TF-IDF Vectorizer, dan tingkat kesamaan antar nama tempat ditentukan dengan menggunakan cosine similarity, selanjutnya dilakukan pengujian terhadap sistem rekomendasi yang menggunakan pendekatan content-based filtering recommendation. Hasil pengujian tersebut dapat dilihat sebagai berikut:
-
-  Diambil sebuah nama tempat yang dipilih oleh pengguna.
-
-  **Tabel 5. Nama Tempat yang Dipilih Pengguna**
-  | Place_Id | Place_Name | Category |
-  | -------- | ---------- | ----------- |
-  | 1        | Monumen Nasional | Budaya |
-
-  Berikut adalah hasil rekomendasi nama tempat berdasarkan kategori yang sama.
-
-  **Tabel 6. Hasil Rekomendasi _Content-based Filtering_**
-
-  | Place_Name                          | Category |
-  | ----------------------------------- | -------- |
-  | Candi Sewu                          | Budaya   |
-  | Museum Benteng Vredeburg Yogyakarta | Budaya   |
-  | Museum Satria Mandala               | Budaya   |
-  | Kyotoku Floating Market             | Budaya   |
-  | Bandros City Tour                   | Budaya   |
-
-  Berdasarkan hasil rekomendasi di atas, dapat dilihat bahwa sistem yang dibuat berhasil memberikan rekomendasi tempat berdasarkan sebuah tempat, yaitu 'Monumen Nasional' dan dihasilkan rekomendasi tempat dengan kategori yang sama, yaitu budaya.
-
 ### Model Development dengan Collaborative Filtering
 
 Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan collaborative filtering meliputi data preparation, pembagian data menjadi data latih dan data validasi, serta pembangunan model dan pengujian sistem rekomendasi. Berikut adalah rincian dari setiap tahap yang telah dijelaskan:
@@ -230,6 +205,27 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
   - $FP =$ _False Positive_; jumlah item  rekomendasi yang tidak sesuai
 
 
+  Adapun output model Content Based Filtering pada penelitan ini dapat dilihat dari Tabel 1 dan Tabel 1 dibawah ini :
+
+  **Tabel 5. Nama Tempat yang Dipilih Pengguna**
+
+  | Place_Id | Place_Name | Category |
+  | -------- | ---------- | ----------- |
+  | 1        | Monumen Nasional | Budaya |
+
+  Berikut adalah hasil rekomendasi nama tempat berdasarkan kategori yang sama.
+
+  **Tabel 6. Hasil Rekomendasi _Content-based Filtering_**
+
+  | Place_Name                          | Category |
+  | ----------------------------------- | -------- |
+  | Candi Sewu                          | Budaya   |
+  | Museum Benteng Vredeburg Yogyakarta | Budaya   |
+  | Museum Satria Mandala               | Budaya   |
+  | Kyotoku Floating Market             | Budaya   |
+  | Bandros City Tour                   | Budaya   |
+
+  
 #### Evaluasi Model Collaborative Filtering
 
 
