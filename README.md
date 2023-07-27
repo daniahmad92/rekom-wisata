@@ -38,35 +38,48 @@ Collaborative Filtering adalah metode yang memanfaatkan pola kesamaan dan kesesu
 ## Data Understanding
 
 
+### Informasi Dataset
 
 Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destination](https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination) yang diambil dari Kaggle dengan `tourism_with_id.csv` dan `tourism_rating.csv` sebagai dataset yang digunakan.
 
+##### Dataset Lokasi Wisata (tourism_with_id.csv)
   
-  **Tabel 2. Variabel Dataset tourism_with_id**
+  Dataset  `tourism_with_id.csv` , memiliki 11 kolom dan 437 baris.  Dari 11 kolom, terdapat 2 kolom yang memiliki tipe data integer, 4 float dan 5 objek. Adapun Deskripsi dari masing masing variabel dapat dilihat pada Tabel 1 dibawah ini.
 
-  | #   | Variabel     | Deskripsi                                            | Tipe Data   |
+  Tabel 1. Variabel Dataset tourism_with_id
+
+  | No  | Variabel     | Deskripsi                                            | Tipe Data   |
   | --- | ------------ | -----------------------------------------------------| ----------- |
-  | 0   | Place_Id     | Id unik untuk setiap lokasi wisata                   | int64       |
-  | 1   | Place_Name   | Nama dari lokasi wisata                              | object      |
-  | 2   | Description  | Deskripsi singkat tentang lokasi wisata              | object      |
-  | 3   | Category     | Kategori atau jenis dari lokasi wisata               | object      |
-  | 4   | City         | Nama kota atau daerah tempat lokasi wisata berada    | object      |
-  | 5   | Price        | Harga tiket masuk ke lokasi wisata.                  | int64       |
-  | 6   | Rating       | Rating lokasi wisata tersebut                        | float64     |
-  | 7   | Time_Minutes | Perkiraan waktu tempuh untuk mencapai lokasi wisata  | float64     |
-  | 8   | Coordinate   | Koordinat geografis lokasi wisata.                   | object      |
-  | 9   | Lat          | Latitude (garis lintang) lokasi wisata               | float64     |
-  | 10  | Long         | Longitude (garis bujur) lokasi wisata.               | float64     |
+  | 1   | Place_Id     | Id unik untuk setiap lokasi wisata                   | int64       |
+  | 2   | Place_Name   | Nama dari lokasi wisata                              | object      |
+  | 3   | Description  | Deskripsi singkat tentang lokasi wisata              | object      |
+  | 4   | Category     | Kategori atau jenis dari lokasi wisata               | object      |
+  | 5   | City         | Nama kota atau daerah tempat lokasi wisata berada    | object      |
+  | 6   | Price        | Harga tiket masuk ke lokasi wisata.                  | int64       |
+  | 7   | Rating       | Rating lokasi wisata tersebut                        | float64     |
+  | 8   | Time_Minutes | Perkiraan waktu tempuh untuk mencapai lokasi wisata  | float64     |
+  | 9   | Coordinate   | Koordinat geografis lokasi wisata.                   | object      |
+  | 10  | Lat          | Latitude (garis lintang) lokasi wisata              | float64     |
+  | 11  | Long         | Longitude (garis bujur) lokasi wisata.               | float64     |
 
+##### Dataset Rating (tourism_rating.csv)
+  
+  Dataset  `tourism_rating.csv` , memiliki 3 kolom dan 10.000 baris. Semua kolom memiliki tipe data Integer.Adapun Deskripsi dari masing masing variabel dapat dilihat pada Tabel 2 dibawah ini.
 
-
-  **Tabel 2. Variabel Dataset tourism_with_id**
+  Tabel 2. Variabel Dataset tourism_rating.csv
 
   | #   | Variabel      | Deskripsi                                                             | Dtype |
   | --- | ------------- | --------------------------------------------------------------------  | ----- |
-  | 0   | User_Id       | Id unik wisatan                                                       | int64 |
+  | 0   | User_Id       | Id unik wisatawan                                                       | int64 |
   | 1   | Place_Id      | Id unik untuk setiap lokasi wisata                                    | int64 |
   | 2   | Place_Ratings | Rating yang diberikan oleh wisatawan terhadap tempat wisata tersebut  | int64 |
+
+
+### Pengecekan Missing Value
+  
+  Proses pengecekan data yang hilang atau Missing Value dilakukan pada semua dataset baik dataset lokasi wisata maupun dataset rating. Setelah dilakukan pengecekan, tidak ada data yang hilang/kosong pada kedua dataset tersbut.
+
+
 
 ## Data Preparation
 
@@ -78,9 +91,7 @@ Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses tr
 
    Pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
 
-2. **Pengecekan Missing Values**
 
-   Proses pengecekan data yang hilang atau _missing value_ dilakukan pada masing-masing dataset tourism_with_id dan tourism_rating. Berdasarkan hasil pengecekan, ternyata tidak ada data yang hilang dari kedua dataset tersebut.
 
 
 
