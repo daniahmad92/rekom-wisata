@@ -86,16 +86,22 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
 
 ## Data Preparation
 
-Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses training model. Di sini dilakukan penghapusan kolom yang tidak diperlukan, pembersihkan data _missing value_, dan melakukan pengecekan dan penghapusan data duplikat.
+Tahap ini bertujuan untuk mempersiapkan data yang akan digunakan untuk proses training model. 
 
-1. **Penghapusan Kolom yang Tidak Diperlukan**
+#### Data Preparation untuk model Content Based Filtering
 
-   Pada dataset tourism_with_id, data yang diperlukan hanya ada pada kolom `Place_Id`, `Place_Name`, dan `Category`, jadi hapus yang lain.
+   - Penghapusan Kolom yang Tidak Diperlukan
+     Pada dataset tourism_with_id, data yang diperlukan hanya ada pada kolom `Place_Id`, `Place_Name`, dan `Category`, jadi hapus yang lain.Sedangkan pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
 
-   Pada dataset tourism_rating, semua kolom diperlukan, jadi tidak ada kolom yang dihapus.
+#### Data Preparation untuk model Collaborative Filtering
+   
+   - Encoding dan Mapping Kolom
 
+     Pada tahap data preparation ini, dilakukan proses encoding fitur User_Id pada dataset ratings dan fitur Place_Id pada dataset ratings menjadi sebuah array. Hasil encoding tersebut kemudian dipetakan (mapped) ke dalam dataset ratings untuk menghubungkan data pengguna dengan data tempat wisata.
 
+   - Pembagian Data Latih dan Data Validasi:
 
+     Untuk mempersiapkan proses pengujian, data ratings diacak sebelum dilakukan pembagian menjadi data latih (train data) dan data validasi (validation data).Pembagian data dilakukan dengan rasio 80:20, di mana 80% data digunakan sebagai data latih dan 20% data digunakan sebagai data validasi.
 
 
 ## Modeling
@@ -153,23 +159,6 @@ Adapun tahap dalam pembuatan rekomendasi ini , diantaranya:
 
 
 ### Model Development dengan Collaborative Filtering
-
-Tahap-tahap yang dilakukan untuk membuat sistem rekomendasi dengan pendekatan collaborative filtering meliputi data preparation, pembagian data menjadi data latih dan data validasi, serta pembangunan model dan pengujian sistem rekomendasi. Berikut adalah rincian dari setiap tahap yang telah dijelaskan:
-   
-##### Data Preparation:
-
-- Pada tahap data preparation, dilakukan proses encoding fitur User_Id pada dataset ratings dan fitur Place_Id pada dataset ratings menjadi sebuah array.
-- Hasil encoding tersebut kemudian dipetakan (mapped) ke dalam dataset ratings untuk menghubungkan data pengguna dengan data tempat wisata.
-- Dalam tahap ini, juga diperoleh informasi tentang jumlah pengguna (user) yang teridentifikasi, yaitu sebanyak 300 pengguna, dan jumlah tempat wisata (place) yang terdaftar, yaitu sebanyak 437 tempat wisata.
-- Rentang nilai rating yang digunakan dalam dataset adalah dari 1 hingga 5.
-
-
-##### Pembagian Data Latih dan Data Validasi:
-
-- Untuk mempersiapkan proses pengujian, data ratings diacak sebelum dilakukan pembagian menjadi data latih (train data) dan data validasi (validation data).
-- Pembagian data dilakukan dengan rasio 80:20, di mana 80% data digunakan sebagai data latih dan 20% data digunakan sebagai data validasi.
-
-##### Pembuatan Model dan pelatihan
 
 Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filtering,dapat dijelaskan sebagai berikut:
 
