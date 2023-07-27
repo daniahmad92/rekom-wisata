@@ -84,7 +84,7 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
   Setelah dilakukan pengecekan data duplikat pada kedua dataset menggunakan metode `duplicated()`, ada 79 data duplikat pada dataset rating.Karena jumlah data pada dataset rating ada 10.0000 dan jumlah data duplikatnya relatif sedikit (79 data),maka untuk mengatasinya yaitu dengan cara menghapus data duplikat tersebut.
 
 
-### Eksploarasi Data
+### Eksplorasi Data
 
    - *Kategori Wisata*
 
@@ -92,7 +92,7 @@ Dataset yang digunakan dalam proyek ini adalah dataset [Indonesia Tourism Destin
 
       Gambar 1. Grafik Kategori Wisata
 
-      Informasi yang didapatkan dari Gambar diatas, bahwa kategori wisata yang paling banyak di Indonesia adalah taman hiburan
+      Informasi yang didapatkan dari Gambar 1, bahwa kategori wisata yang paling banyak di Indonesia adalah taman hiburan
 
    - *Harga Tiket Masuk ke Wisata*
 
@@ -281,9 +281,10 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
 
 
-   Kurva RMSE dapat dilihat pada gambar dibawah ini.
+   Kurva RMSE dapat dilihat pada Gambar 3 dibawah ini.
 
    ![RMSE](https://raw.githubusercontent.com/daniahmad92/rekom-wisata/main/Evaluasi_model_2b.png)
 
+   Gambar 3. Kurva RMSE Collaborative Filtering
 
    Nilai RMSE dari sistem rekomendasi dengan pendekatan _collaborative filtering_ adalah 0.3344 pada _Training RMSE_, dan 0.3413 pada _Validation RMSE_.
