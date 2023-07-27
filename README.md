@@ -137,8 +137,6 @@ Adapun tahap dalam pembuatan rekomendasi ini , diantaranya:
 
 - Hasil dari fungsi rekomendasi akan berupa daftar nama tempat wisata yang direkomendasikan berdasarkan similarity dengan tempat wisata input.
 
-Dengan langkah-langkah di atas, rekomendasi tempat wisata yang serupa dapat diberikan berdasarkan nama tempat wisata yang diinputkan, menggunakan pendekatan TF-IDF dan Cosine Similarity.
-
 
 ##### Hasil _Top-N Recommendation_
 
@@ -250,6 +248,4 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
    - $y_{pred} =$ nilai prediksi terhadap $i$
 
 
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+
