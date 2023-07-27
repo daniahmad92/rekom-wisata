@@ -215,14 +215,40 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
 
 ## Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+#### Evalasi Model Content Based Filtering
+  
+  Adapun matriks evaluasi yang akan digunakan untuk mengevaluasi model content based filtering dapat menggunakan matrik precision.
 
-**---Ini adalah bagian akhir laporan---**
+  Precision adalah metrik evaluasi yang mengukur sejauh mana rekomendasi yang diberikan oleh sistem relevan dan tepat. Dalam konteks sistem rekomendasi, Precision mengukur persentase item yang relevan dari seluruh item yang direkomendasikan kepada pengguna
+
+
+  $$precision = \frac{TP}{TP + FP}$$
+
+  Keterangan:
+
+   $TP =$ _True Positive_; jumlah item rekomendasi yang sesuai
+   $FP =$ _False Positive_; jumlah item  rekomendasi yang tidak sesuai
+
+
+#### Evaluasi Model Collaborative Filtering
+
+
+  RMSE (Root Mean Squared Error) adalah metrik evaluasi yang digunakan dalam sistem rekomendasi berbasis peringkat atau rating-based. Metrik ini mengukur seberapa akurat sistem dalam melakukan prediksi peringkat atau nilai yang diberikan oleh pengguna terhadap item yang direkomendasikan.
+
+  Dalam sistem rekomendasi Collaborative Filtering, RMSE digunakan untuk membandingkan perbedaan antara nilai peringkat atau skor yang diprediksi oleh sistem dengan nilai sebenarnya dari pengguna untuk item-item yang direkomendasikan.
+
+  Berikut adalah rumus RMSE untuk evaluasi sistem rekomendasi Collaborative Filtering:
+
+  $$RMSE=\sqrt{\sum^{n}_{i=1} \frac{y_i - y\\_pred_i}{n}}$$
+
+   Keterangan:
+   $n =$ jumlah _dataset_
+   $i =$ urutan data dalam _dataset_
+   $y_i =$ nilai yang sebenarnya
+   $y_{pred} =$ nilai prediksi terhadap $i$
+
 
 _Catatan:_
 - _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
