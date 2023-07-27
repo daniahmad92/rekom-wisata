@@ -228,8 +228,8 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
 
   Keterangan:
 
-   $TP =$ _True Positive_; jumlah item rekomendasi yang sesuai
-   $FP =$ _False Positive_; jumlah item  rekomendasi yang tidak sesuai
+  -  $TP =$ _True Positive_; jumlah item rekomendasi yang sesuai
+  - $FP =$ _False Positive_; jumlah item  rekomendasi yang tidak sesuai
 
 
 #### Evaluasi Model Collaborative Filtering
@@ -244,10 +244,10 @@ Adapun tahapan pembuatan model rekomendasi dengan pendekatan collaborative filte
   $$RMSE=\sqrt{\sum^{n}_{i=1} \frac{y_i - y\\_pred_i}{n}}$$
 
    Keterangan:
-   $n =$ jumlah _dataset_
-   $i =$ urutan data dalam _dataset_
-   $y_i =$ nilai yang sebenarnya
-   $y_{pred} =$ nilai prediksi terhadap $i$
+   - $n =$ jumlah _dataset_
+   - $i =$ urutan data dalam _dataset_
+   - $y_i =$ nilai yang sebenarnya
+   - $y_{pred} =$ nilai prediksi terhadap $i$
 
 
 _Catatan:_
